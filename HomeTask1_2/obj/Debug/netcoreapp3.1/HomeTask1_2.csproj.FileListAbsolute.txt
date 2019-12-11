@@ -1,0 +1,11 @@
+C:\Users\Administrator\source\repos\HomeTask1_2\bin\Debug\netcoreapp3.1\HomeTask1_2.exe
+C:\Users\Administrator\source\repos\HomeTask1_2\bin\Debug\netcoreapp3.1\HomeTask1_2.deps.json
+C:\Users\Administrator\source\repos\HomeTask1_2\bin\Debug\netcoreapp3.1\HomeTask1_2.runtimeconfig.json
+C:\Users\Administrator\source\repos\HomeTask1_2\bin\Debug\netcoreapp3.1\HomeTask1_2.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\HomeTask1_2\bin\Debug\netcoreapp3.1\HomeTask1_2.dll
+C:\Users\Administrator\source\repos\HomeTask1_2\bin\Debug\netcoreapp3.1\HomeTask1_2.pdb
+C:\Users\Administrator\source\repos\HomeTask1_2\obj\Debug\netcoreapp3.1\HomeTask1_2.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\HomeTask1_2\obj\Debug\netcoreapp3.1\HomeTask1_2.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\HomeTask1_2\obj\Debug\netcoreapp3.1\HomeTask1_2.dll
+C:\Users\Administrator\source\repos\HomeTask1_2\obj\Debug\netcoreapp3.1\HomeTask1_2.pdb
+C:\Users\Administrator\source\repos\HomeTask1_2\obj\Debug\netcoreapp3.1\HomeTask1_2.csprojAssemblyReference.cache
