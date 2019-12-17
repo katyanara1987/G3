@@ -3,12 +3,14 @@
 public class Circle
 {
 	private double _radius;
+	private double _diameter;
 	private double _area;
 
 	public Circle(double radius)
 	{
 		Radius = radius;
 		Area = GetArea();
+		Diameter = GetDiameter();
 	}
 
 	public double Radius { 
@@ -20,6 +22,18 @@ public class Circle
 		{
 			_radius = value; 
 		} 
+	}
+
+	public double Diameter
+	{
+		get
+		{
+			return _diameter;
+		}
+		private set
+		{
+			_diameter = value;
+		}
 	}
 
 	public double Area {
@@ -36,4 +50,10 @@ public class Circle
 	{
 		return Math.Round(Math.PI * Math.Pow(_radius, 2), 2);
 	}
+	private double GetDiameter()
+	{
+		return Math.Round(_radius * 2, 2);
+	}
+
+
 }

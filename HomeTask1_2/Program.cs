@@ -21,12 +21,18 @@ namespace HomeTask1_2
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine($"\nCircle radius: {circleRadius}");
+            Console.WriteLine($"\nCircle radius: {circle.Radius}");
             Console.WriteLine($"Circle area: {circle.Area}");
 
-            Console.WriteLine($"\nSquare side: {squareSide}");
-            Console.WriteLine($"Square area: {square.Area}");
+            Console.WriteLine($"\nSquare side: {square.Side}");
+            Console.WriteLine($"Square area: {square.Area}\n");
 
+            Console.WriteLine("circle.Diameter" + circle.Diameter);
+            Console.WriteLine("square.Diagonal" + square.Diagonal);
+
+            Console.WriteLine(ShapesComparator.CircleToSquareRatio(circle.Diameter, square.Side));
+            Console.WriteLine(ShapesComparator.SquareToCircleRatio(circle.Diameter, square.Diagonal));
+            
             Console.WriteLine("\nApplication has finished.");
         }
     }
