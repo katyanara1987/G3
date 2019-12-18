@@ -29,9 +29,21 @@ namespace HomeTask1_2
 
             Console.WriteLine("circle.Diameter" + circle.Diameter);
             Console.WriteLine("square.Diagonal" + square.Diagonal);
+            Console.WriteLine();
 
-            Console.WriteLine(ShapesComparator.CircleToSquareRatio(circle.Diameter, square.Side));
-            Console.WriteLine(ShapesComparator.SquareToCircleRatio(circle.Diameter, square.Diagonal));
+            if (ShapesComparator.CircleToSquareRatio(circle.Diameter, square.Side))
+            {
+                Console.WriteLine("Circle fits into Square");
+                Console.WriteLine("Square does not fit into Circle");
+            }
+            else if (ShapesComparator.SquareToCircleRatio(circle.Diameter, square.Diagonal))
+            {
+                Console.WriteLine("Square fits into Circle");
+                Console.WriteLine("Circle does not fit into Square");
+            }
+            else {
+                Console.WriteLine("Circle and Square are intersected");
+            }
             
             Console.WriteLine("\nApplication has finished.");
         }
