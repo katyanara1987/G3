@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Circle
+public class Circle : Shape
 {
 	private double _radius;
 	private double _diameter;
@@ -46,7 +46,7 @@ public class Circle
 			_area = value;
 		}
 	}
-	private double GetArea()
+	protected override double GetArea()
 	{
 		return Math.Round(Math.PI * Math.Pow(_radius, 2), 2);
 	}

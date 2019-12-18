@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Square
+public class Square : Shape
 {
 	private double _side;
 	private double _area;
@@ -44,7 +44,7 @@ public class Square
 		}
 	}
 	
-	private double GetArea()
+	protected override double GetArea()
 	{
 		return Math.Round(Math.Pow(_side, 2), 2);
 	}
