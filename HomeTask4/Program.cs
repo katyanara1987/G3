@@ -12,11 +12,11 @@ namespace HomeTask4
             for (int i = 0; i < 20; i++){
                 Console.WriteLine("Please input something...");
 
-                String Input = Console.ReadLine();
+                String input = Console.ReadLine();
 
-                if (Input != null && Input != "")
+                if (!string.IsNullOrEmpty(input))
                 {
-                    if (Polyndrom.isPolyndrom(Input))
+                    if (Polyndrom.isPolyndrom(input))
                     {
                         Console.WriteLine("Your input is a polyndrom.");
                     }
