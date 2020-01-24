@@ -33,7 +33,7 @@ namespace HomeTask5.Helpers
             bool parseResult;
             do
             {
-                Console.WriteLine(PrintEnumDefinition<TEnum>());
+                Console.Write(PrintEnumDefinition<TEnum>());
 
                 string _pr = Console.ReadLine();
                 parseResult = Enum.TryParse(_pr, ignoreCase: true, result: out result)

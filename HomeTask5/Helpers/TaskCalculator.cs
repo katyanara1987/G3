@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using HomeTask5.Helpers;
 
 public class TaskCalculator
 {
@@ -12,7 +13,7 @@ public class TaskCalculator
 
         foreach (Task task in list)
         {
-            total += task.Duration;
+            total += EnumHelper.GetEnumValueAttribute(task.Complexity);
         }
 
         return total;
@@ -28,9 +29,9 @@ public class TaskCalculator
 
         foreach (Task task in list)
         {
-            if (resultHours + task.Duration <= maxPossibleHours)
+            if (resultHours + EnumHelper.GetEnumValueAttribute(task.Complexity) <= maxPossibleHours)
             {
-                resultHours += task.Duration;
+                resultHours += EnumHelper.GetEnumValueAttribute(task.Complexity);
                 resultList.Add(task);
             }
             else
@@ -46,7 +47,7 @@ public class TaskCalculator
     public static int CompareTasksPriorities(Task t1, Task t2)
     {
         var firstCompare = t1.Priority.CompareTo(t2.Priority);
-        return firstCompare != 0 ? firstCompare : t2.Duration.CompareTo(t1.Duration);
+        return firstCompare != 0 ? firstCompare : EnumHelper.GetEnumValueAttribute(t2.Complexity).CompareTo(EnumHelper.GetEnumValueAttribute(t1.Complexity));
     }
 
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-public static class Validator
+public static class Validations
 {
-    public static bool ValidatePriorityOrComplexity(String inputValue)
+ /*   public static bool ValidatePriorityOrComplexity(String inputValue)
     {
         int outputValue;
 
@@ -16,7 +16,7 @@ public static class Validator
         return true;
     }
 
- /*   public static bool ValidateComplexity(String inputValue)
+    public static bool ValidateComplexity(String inputValue)
     {
         int outputValue;
 

@@ -18,7 +18,5 @@ using System.Text;
 
     public Complexity Complexity { get; private set; }
 
-    public int Duration { get; set; }
-
 }
 

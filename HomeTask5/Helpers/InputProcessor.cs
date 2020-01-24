@@ -6,38 +6,39 @@ using System.Text;
 
 public class InputProcessor
 {
-    public List<Task> Tasks = new List<Task>();
 
 
-    public void ProcessInput()
+
+    public List<Task> ProcessInput()
     {
+        List<Task> Tasks = new List<Task>();
         Answers answer = Answers.Yes;
-        Console.WriteLine("Please, enter task");
+        Console.WriteLine("Please, enter your tasks.");
         while (answer == Answers.Yes)
         {
-            AddTask();
-            Console.Clear();
-            Console.WriteLine("Do you want add another task?");
+            AddTask(Tasks);
+            Console.WriteLine("Do you want to add another task?");
             answer = EnumHelper.RequestForEnumValue<Answers>();
+            Console.Clear();
         }
-       
+
+        return Tasks;
     }
 
-    public void AddTask()
+    public void AddTask(List<Task> tasks)
     {
-        Console.WriteLine("Enter complexity");
-        Complexity complexity = EnumHelper.RequestForEnumValue<Complexity>();
-        Console.WriteLine("Enter priority");
-        Priority priority = EnumHelper.RequestForEnumValue<Priority>();
-        Console.WriteLine("enter description");
+        Console.WriteLine("Enter title.");
         string name = Console.ReadLine();
-        Task task = new Task(name, priority, complexity);
-        Tasks.Add(task);
+        Console.WriteLine("Enter complexity.");
+        Complexity complexity = EnumHelper.RequestForEnumValue<Complexity>();
+        Console.WriteLine("Enter priority.");
+        Priority priority = EnumHelper.RequestForEnumValue<Priority>();
 
-        int duration = EnumHelper.GetEnumValueAttribute(task.Complexity);
+        Task task = new Task(name, priority, complexity);
+        tasks.Add(task);
     }
 
-    private Task ProcessTaskInput(String taskName)
+   /* private Task ProcessTaskInput(String taskName)
     {
         Task task = null;
         int priority = 0;
@@ -96,7 +97,7 @@ public class InputProcessor
 
         return priority;
     }
-
+    */
     public int ProcessDaysInput()
     {
         int days = 0;
@@ -105,7 +106,7 @@ public class InputProcessor
         while (string.IsNullOrEmpty(value))
         {
             value = Console.ReadLine();
-            if (Validator.ValidateDays(value))
+            if (Validations.ValidateDays(value))
             {
                 days = int.Parse(value);
             }
