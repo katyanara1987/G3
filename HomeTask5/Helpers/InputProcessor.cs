@@ -1,42 +1,48 @@
-﻿using System;
+﻿using HomeTask5.Enums;
+using HomeTask5.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 public class InputProcessor
 {
+    public List<Task> Tasks = new List<Task>();
 
-    static Dictionary<string, int> ComplexityHours = new Dictionary<string, int>()
+
+    public void ProcessInput()
     {
-        { "1", 1 }, 
-        { "2", 2 }, 
-        { "3", 4 }
-    };
-
-    public static List<Task> ProcessInput()
-    {
-        List<Task> list = new List<Task>();
-                       
-        String taskName = null;
-
-        do
+        Answers answer = Answers.Yes;
+        Console.WriteLine("Please, enter task");
+        while (answer == Answers.Yes)
         {
-            Console.WriteLine("Please enter task name:");
-            taskName = Console.ReadLine();
-            if (!string.IsNullOrEmpty(taskName))
-            {
-            list.Add(ProcessTaskInput(taskName));
-            }
+            AddTask();
+            Console.Clear();
+            Console.WriteLine("Do you want add another task?");
+            answer = EnumHelper.RequestForEnumValue<Answers>();
         }
-        while (!string.IsNullOrEmpty(taskName));
-
-        return list;
+       
     }
 
-    private static Task ProcessTaskInput(String taskName)
+    public void AddTask()
+    {
+        Console.WriteLine("Enter complexity");
+        Complexity complexity = EnumHelper.RequestForEnumValue<Complexity>();
+        Console.WriteLine("Enter priority");
+        Priority priority = EnumHelper.RequestForEnumValue<Priority>();
+        Console.WriteLine("enter description");
+        string name = Console.ReadLine();
+        Task task = new Task(name, priority, complexity);
+        Tasks.Add(task);
+
+        int duration = EnumHelper.GetEnumValueAttribute(task.Complexity);
+    }
+
+    private Task ProcessTaskInput(String taskName)
     {
         Task task = null;
         int priority = 0;
         int duration = 0;
+
 
         // Priority part
         Console.WriteLine("Enter task priority. 1 - high, 2 - medium, 3 - low.");
@@ -52,7 +58,7 @@ public class InputProcessor
             value = Console.ReadLine();
             if (Validator.ValidatePriorityOrComplexity(value))
             {
-                duration = ComplexityHours.GetValueOrDefault<string, int>(value);
+                //duration = ComplexityHours.GetValueOrDefault<string, int>(value);
             }
             else
             {
@@ -61,15 +67,15 @@ public class InputProcessor
             }
         }
 
-        if (priority != 0 && duration != 0)
-        {
-            task = new Task(taskName, priority, duration);
-        }
-                        
+        //if (priority != 0 && duration != 0)
+        //{
+        //    task = new Task(taskName, priority, duration);
+        //}
+
         return task;
 
     }
-    public static int ProcessPriorityInput()
+    public int ProcessPriorityInput()
     {
         int priority = 0;
 
@@ -91,7 +97,7 @@ public class InputProcessor
         return priority;
     }
 
-    public static int ProcessDaysInput()
+    public int ProcessDaysInput()
     {
         int days = 0;
 

@@ -46,7 +46,7 @@ public class TaskCalculator
     public static int CompareTasksPriorities(Task t1, Task t2)
     {
         var firstCompare = t1.Priority.CompareTo(t2.Priority);
-        return firstCompare != 0 ? firstCompare : t1.Duration.CompareTo(t2.Duration);
+        return firstCompare != 0 ? firstCompare : t2.Duration.CompareTo(t1.Duration);
     }
 
 }

@@ -1,56 +1,24 @@
-﻿using System;
+﻿using HomeTask5.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
     public class Task   
     {
-        private string _name;
-        private int _priority;
-        private int _duration;
-
-        public Task(string name, int priority, int duration) 
+    public Task(string name, Priority priority, Complexity complexity) 
         {
             Name = name;
             Priority = priority;
-            Duration = duration;
+            Complexity = complexity;
         }
 
-        public string Name 
-        {
-            get 
-            {
-                return _name;
-            }
-            private set 
-            {
-                _name = value;
-            }
-        }
+    public string Name { get; private set; }
 
-        public int Priority
-        {
-            get
-            {
-                return _priority;
-            }
-            private set
-            {
-                _priority = value;
-            }
-        }
+    public Priority Priority { get; private set; }
 
-        public int Duration 
-        {
-            get 
-            {
-                return _duration;
-            }
-            private set
-            {
-                _duration = value;
-            }
-        }
+    public Complexity Complexity { get; private set; }
 
+    public int Duration { get; set; }
 
-    }
+}
 
