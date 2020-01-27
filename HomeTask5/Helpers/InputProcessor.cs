@@ -38,66 +38,6 @@ public class InputProcessor
         tasks.Add(task);
     }
 
-   /* private Task ProcessTaskInput(String taskName)
-    {
-        Task task = null;
-        int priority = 0;
-        int duration = 0;
-
-
-        // Priority part
-        Console.WriteLine("Enter task priority. 1 - high, 2 - medium, 3 - low.");
-        String value = null;
-
-        priority = ProcessPriorityInput();
-
-        // Duration part
-        Console.WriteLine("Enter task complexity. 1 - Easy, 2 - Medium, 3 - Difficult.");
-        value = null;
-        while (string.IsNullOrEmpty(value))
-        {
-            value = Console.ReadLine();
-            if (Validator.ValidatePriorityOrComplexity(value))
-            {
-                //duration = ComplexityHours.GetValueOrDefault<string, int>(value);
-            }
-            else
-            {
-                Console.WriteLine("You've entered wrong number.");
-                value = null;
-            }
-        }
-
-        //if (priority != 0 && duration != 0)
-        //{
-        //    task = new Task(taskName, priority, duration);
-        //}
-
-        return task;
-
-    }
-    public int ProcessPriorityInput()
-    {
-        int priority = 0;
-
-        String value = null;
-        while (string.IsNullOrEmpty(value))
-        {
-            value = Console.ReadLine();
-            if (Validator.ValidatePriorityOrComplexity(value))
-            {
-                priority = int.Parse(value);
-            }
-            else
-            {
-                Console.WriteLine("You've entered wrong number.");
-                value = null;
-            }
-        }
-
-        return priority;
-    }
-    */
     public int ProcessDaysInput()
     {
         int days = 0;

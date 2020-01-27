@@ -11,9 +11,10 @@ namespace HomeTask5
         {
             Console.WriteLine("Application start.");
             InputProcessor processor = new InputProcessor();
+            TaskCalculator calculations = new TaskCalculator();
             List<Task> list = processor.ProcessInput();
 
-            Console.WriteLine($"For all your tasks you need {TaskCalculator.CalculateTotalDuration(list)} hours");
+            Console.WriteLine($"For all your tasks you need {calculations.CalculateTotalDuration(list)} hours");
             Console.WriteLine("\n Press Any key to continue...");
             Console.ReadKey();
             Console.Clear();
@@ -36,14 +37,8 @@ namespace HomeTask5
             Console.WriteLine("Now you need to enter amount of days to get list of tasks that can be done.");
             
             int days = processor.ProcessDaysInput();
-            list = TaskCalculator.calculateTaskForDays(list, days);
-
             Console.WriteLine($"Next tasks could be done on {days} days:");
-
-            foreach (Task task in list)
-            {
-                Console.WriteLine($"Task priority: {task.Priority}, task name: {task.Name}, duration: {EnumHelper.GetEnumValueAttribute(task.Complexity)}");
-            }
+            calculations.CalculateTaskForDays(list, days);
 
             Console.WriteLine("Application end.");
         }
