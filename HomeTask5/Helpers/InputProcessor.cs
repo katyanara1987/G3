@@ -11,18 +11,18 @@ public class InputProcessor
 
     public List<Task> ProcessInput()
     {
-        List<Task> Tasks = new List<Task>();
+        List<Task> tasks = new List<Task>();
         Answers answer = Answers.Yes;
         Console.WriteLine("Please, enter your tasks.");
         while (answer == Answers.Yes)
         {
-            AddTask(Tasks);
+            AddTask(tasks);
             Console.WriteLine("Do you want to add another task?");
             answer = EnumHelper.RequestForEnumValue<Answers>();
             Console.Clear();
         }
 
-        return Tasks;
+        return tasks;
     }
 
     public void AddTask(List<Task> tasks)
