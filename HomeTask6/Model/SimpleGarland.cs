@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HomeTask6.Model
 {
-    public class SimpleGarland : Garland
+    public class SimpleGarland : Garland<Bulb>
     {
-        public SimpleGarland(int number)
+        public SimpleGarland(int number) : base(number)
         {
-            BulbsNumber = number;
+           // BulbsNumber = number;
         }
 
         public override List<Bulb> GetBulbs()
@@ -23,6 +23,11 @@ namespace HomeTask6.Model
             }
 
             return list;
+        }
+
+        protected override List<Bulb> Build()
+        {
+            return new List<Bulb>();
         }
     }
 }

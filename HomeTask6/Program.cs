@@ -7,6 +7,9 @@ namespace HomeTask6
     {
         static void Main(string[] args)
         {
+            var v = new SimpleGarland(12);
+
+
             Console.WriteLine("Enter number of bulbs in Garland:");
             string bulbsNumber = Console.ReadLine();
 
