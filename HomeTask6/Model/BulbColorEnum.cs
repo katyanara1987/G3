@@ -1,10 +1,10 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace HomeTask6.Model
 {
-    public public enum BulbColor
+    public enum BulbColor
     {
         RED,
         YELLOW,
@@ -12,4 +12,3 @@ namespace HomeTask6.Model
         BLUE
     }
 }
-*/

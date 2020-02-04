@@ -1,18 +1,12 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace HomeTask6.Model
 {
-    class ColorBulb
+    public class ColorBulb : Bulb
     {
-        private BulbColor Color { get; set; }
-
-        public ColorBulb(BulbColor color)
-        {
-            Color = color;
-        }
-
+        public new BulbColor Color { get; set; }
 
     }
-}*/
+}

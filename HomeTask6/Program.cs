@@ -1,5 +1,6 @@
 ﻿using System;
 using HomeTask6.Model;
+using System.Threading;
 
 namespace HomeTask6
 {
@@ -7,18 +8,17 @@ namespace HomeTask6
     {
         static void Main(string[] args)
         {
-            var v = new SimpleGarland(12);
-
 
             Console.WriteLine("Enter number of bulbs in Garland:");
             string bulbsNumber = Console.ReadLine();
 
             Console.WriteLine("Current state of Simple Garland:");
-            SimpleGarland garland = new SimpleGarland(int.Parse(bulbsNumber));
-            foreach (Bulb bulb in garland.GetBulbs())
-            {
-                Console.WriteLine(bulb.State);
-            }
+            SimpleGarland simpleGarland = new SimpleGarland(int.Parse(bulbsNumber));
+            simpleGarland.PrintGarland();
+
+            Console.WriteLine("Current state of Color Garland:");
+            ColorGarland colorGarland = new ColorGarland(int.Parse(bulbsNumber));
+            colorGarland.PrintGarland();
         }
     }
 }

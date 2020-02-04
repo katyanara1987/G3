@@ -7,6 +7,7 @@ namespace HomeTask6.Model
     public class Bulb
     {
         public BulbState State { get; set; }
-               
+        public int SerialNumber { get; set; }
+
     }
 }

@@ -8,26 +8,34 @@ namespace HomeTask6.Model
     {
         public SimpleGarland(int number) : base(number)
         {
-           // BulbsNumber = number;
-        }
+            BulbsNumber = number;
+        }        
 
-        public override List<Bulb> GetBulbs()
+        public override List<Bulb> GetBulbsState(List<Bulb> bulbs)
         {
-            List<Bulb> list = new List<Bulb>();
-
-            for (int i = 0; i < BulbsNumber; i++)
+            for (int i = 0; i < bulbs.Count; i++)
             {
                 Bulb bulb = new Bulb();
+                bulb.SerialNumber = i;
                 bulb.State = SetBulbState(i);
-                list.Add(bulb);
+                bulbs[i] = bulb;
             }
 
-            return list;
+            return bulbs;
         }
 
-        protected override List<Bulb> Build()
+        protected override List<Bulb> Build(int count)
         {
-            return new List<Bulb>();
+            List<Bulb> garland = new List<Bulb>();
+
+            for (int i = 0; i < count; i++)
+            {
+                Bulb bulb = new Bulb();
+                garland.Add(bulb);
+            }
+
+            return garland;
+
         }
     }
 }
