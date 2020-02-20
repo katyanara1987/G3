@@ -1,0 +1,83 @@
+[
+  {
+    "shipmentid": "shipment1",
+    "deliveryaddress": "address1",
+    "orders": [
+      {
+        "orderid": 1,
+        "producttype": "producttype1",
+        "productquantity": 1,
+        "customer": {
+          "customerid": "1ca0f435-d991-4523-81e7-4249294804d6",
+          "customername": "customer1"
+        }
+      },
+      {
+        "orderid": 2,
+        "producttype": "producttype2",
+        "productquantity": 2,
+        "customer": {
+          "customerid": "d4c26b1b-5280-4b37-a3e3-90ed3dbeb5c0",
+          "customername": "customer2"
+        }
+      },
+      {
+        "orderid": 3,
+        "producttype": "producttype3",
+        "productquantity": 3,
+        "customer": {
+          "customerid": "f661d6e5-5adc-4b34-9710-32d2fcd3446e",
+          "customername": "customer3"
+        }
+      }
+    ]
+  },
+  {
+    "shipmentid": "shipment2",
+    "deliveryaddress": "address1",
+    "orders": [
+      {
+        "orderid": 1,
+        "producttype": "producttype4",
+        "productquantity": 10,
+        "customer": {
+          "customerid": "f661d6e5-5adc-4b34-9710-32d2fcd3446e",
+          "customername": "customer3"
+        }
+      },
+      {
+        "orderid": 2,
+        "producttype": "producttype2",
+        "productquantity": 5,
+        "customer": {
+          "customerid": "d4c26b1b-5280-4b37-a3e3-90ed3dbeb5c0",
+          "customername": "customer2"
+        }
+      }
+    ]
+  },
+  {
+    "shipmentid": "shipment3",
+    "deliveryaddress": "address2",
+    "orders": [
+      {
+        "orderid": 1,
+        "producttype": "producttype5",
+        "productquantity": 2,
+        "customer": {
+          "customerid": "1ca0f435-d991-4523-81e7-4249294804d6",
+          "customername": "customer1"
+        }
+      },
+      {
+        "orderid": 2,
+        "producttype": "producttype3",
+        "productquantity": 3,
+        "customer": {
+          "customerid": "d4c26b1b-5280-4b37-a3e3-90ed3dbeb5c0",
+          "customername": "customer2"
+        }
+      }
+    ]
+  }
+]
