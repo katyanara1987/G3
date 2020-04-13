@@ -15,6 +15,7 @@ class TestCalculator
         TestsRunStart = Date.Now;
     }
 
+    //Test, Description, ExpectedResult
     [Test(ExpectedResult = 0), Description("Check that multiply to zero is always 0")]
     public double CheckMultiplyToZero()
     {
@@ -23,6 +24,7 @@ class TestCalculator
 
 
     [TestCase(2, 4, 6), Description("Check successfull Addition")]
+    [Ignore("Till New Year", Until = "2021-01-01 00:00:00")]
     public void SuccessAdd(int x, int y, int result)
     {
         Assert.That(calculator.Add(x, y), Is.EqualTo(result));
